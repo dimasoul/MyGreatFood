@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C8B261C2937A3A500DBEA38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B261B2937A3A500DBEA38 /* AppDelegate.swift */; };
 		2C8B261E2937A3A500DBEA38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B261D2937A3A500DBEA38 /* SceneDelegate.swift */; };
-		2C8B26202937A3A500DBEA38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B261F2937A3A500DBEA38 /* ViewController.swift */; };
+		2C8B26202937A3A500DBEA38 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B261F2937A3A500DBEA38 /* MainViewController.swift */; };
 		2C8B26232937A3A500DBEA38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8B26212937A3A500DBEA38 /* Main.storyboard */; };
 		2C8B26262937A3A500DBEA38 /* MyGreatFood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B26242937A3A500DBEA38 /* MyGreatFood.xcdatamodeld */; };
 		2C8B26282937A3A500DBEA38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8B26272937A3A500DBEA38 /* Assets.xcassets */; };
@@ -17,6 +17,12 @@
 		2C8B26362937A3A500DBEA38 /* MyGreatFoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B26352937A3A500DBEA38 /* MyGreatFoodTests.swift */; };
 		2C8B26402937A3A500DBEA38 /* MyGreatFoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B263F2937A3A500DBEA38 /* MyGreatFoodUITests.swift */; };
 		2C8B26422937A3A500DBEA38 /* MyGreatFoodUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B26412937A3A500DBEA38 /* MyGreatFoodUITestsLaunchTests.swift */; };
+		2C8B26502937A5B300DBEA38 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B264E2937A5AB00DBEA38 /* Recipe.swift */; };
+		2C8B26522937A6AA00DBEA38 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B26512937A6AA00DBEA38 /* MainPresenter.swift */; };
+		2C8B26582938DDA100DBEA38 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8B26572938DDA100DBEA38 /* MainViewController.xib */; };
+		2C8B265A2938DF1000DBEA38 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B26592938DF1000DBEA38 /* ModuleBuilder.swift */; };
+		2C8B265F2938F5FE00DBEA38 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B265E2938F5FE00DBEA38 /* MainPresenterTest.swift */; };
+		2C8B26612939E07800DBEA38 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B26602939E07800DBEA38 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +46,7 @@
 		2C8B26182937A3A500DBEA38 /* MyGreatFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGreatFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8B261B2937A3A500DBEA38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C8B261D2937A3A500DBEA38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C8B261F2937A3A500DBEA38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C8B261F2937A3A500DBEA38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2C8B26222937A3A500DBEA38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C8B26252937A3A500DBEA38 /* MyGreatFood.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyGreatFood.xcdatamodel; sourceTree = "<group>"; };
 		2C8B26272937A3A500DBEA38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +57,12 @@
 		2C8B263B2937A3A500DBEA38 /* MyGreatFoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyGreatFoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8B263F2937A3A500DBEA38 /* MyGreatFoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGreatFoodUITests.swift; sourceTree = "<group>"; };
 		2C8B26412937A3A500DBEA38 /* MyGreatFoodUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGreatFoodUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2C8B264E2937A5AB00DBEA38 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		2C8B26512937A6AA00DBEA38 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		2C8B26572938DDA100DBEA38 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		2C8B26592938DF1000DBEA38 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		2C8B265E2938F5FE00DBEA38 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
+		2C8B26602939E07800DBEA38 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +115,9 @@
 			children = (
 				2C8B261B2937A3A500DBEA38 /* AppDelegate.swift */,
 				2C8B261D2937A3A500DBEA38 /* SceneDelegate.swift */,
-				2C8B261F2937A3A500DBEA38 /* ViewController.swift */,
+				2C8B26592938DF1000DBEA38 /* ModuleBuilder.swift */,
+				2C8B26622939E09600DBEA38 /* ServiceLayer */,
+				2C8B26532938DCD300DBEA38 /* MainModule */,
 				2C8B26212937A3A500DBEA38 /* Main.storyboard */,
 				2C8B26272937A3A500DBEA38 /* Assets.xcassets */,
 				2C8B26292937A3A500DBEA38 /* LaunchScreen.storyboard */,
@@ -116,6 +130,7 @@
 		2C8B26342937A3A500DBEA38 /* MyGreatFoodTests */ = {
 			isa = PBXGroup;
 			children = (
+				2C8B265D2938F57F00DBEA38 /* TestMainModule */,
 				2C8B26352937A3A500DBEA38 /* MyGreatFoodTests.swift */,
 			);
 			path = MyGreatFoodTests;
@@ -128,6 +143,57 @@
 				2C8B26412937A3A500DBEA38 /* MyGreatFoodUITestsLaunchTests.swift */,
 			);
 			path = MyGreatFoodUITests;
+			sourceTree = "<group>";
+		};
+		2C8B26532938DCD300DBEA38 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				2C8B26542938DD0B00DBEA38 /* View */,
+				2C8B26552938DD3100DBEA38 /* Model */,
+				2C8B26562938DD4200DBEA38 /* Presenter */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		2C8B26542938DD0B00DBEA38 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C8B261F2937A3A500DBEA38 /* MainViewController.swift */,
+				2C8B26572938DDA100DBEA38 /* MainViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C8B26552938DD3100DBEA38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C8B264E2937A5AB00DBEA38 /* Recipe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C8B26562938DD4200DBEA38 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2C8B26512937A6AA00DBEA38 /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2C8B265D2938F57F00DBEA38 /* TestMainModule */ = {
+			isa = PBXGroup;
+			children = (
+				2C8B265E2938F5FE00DBEA38 /* MainPresenterTest.swift */,
+			);
+			path = TestMainModule;
+			sourceTree = "<group>";
+		};
+		2C8B26622939E09600DBEA38 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2C8B26602939E07800DBEA38 /* NetworkService.swift */,
+			);
+			path = ServiceLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +303,7 @@
 				2C8B262B2937A3A500DBEA38 /* LaunchScreen.storyboard in Resources */,
 				2C8B26282937A3A500DBEA38 /* Assets.xcassets in Resources */,
 				2C8B26232937A3A500DBEA38 /* Main.storyboard in Resources */,
+				2C8B26582938DDA100DBEA38 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +328,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C8B26202937A3A500DBEA38 /* ViewController.swift in Sources */,
+				2C8B26502937A5B300DBEA38 /* Recipe.swift in Sources */,
+				2C8B26522937A6AA00DBEA38 /* MainPresenter.swift in Sources */,
+				2C8B26612939E07800DBEA38 /* NetworkService.swift in Sources */,
+				2C8B26202937A3A500DBEA38 /* MainViewController.swift in Sources */,
 				2C8B26262937A3A500DBEA38 /* MyGreatFood.xcdatamodeld in Sources */,
+				2C8B265A2938DF1000DBEA38 /* ModuleBuilder.swift in Sources */,
 				2C8B261C2937A3A500DBEA38 /* AppDelegate.swift in Sources */,
 				2C8B261E2937A3A500DBEA38 /* SceneDelegate.swift in Sources */,
 			);
@@ -273,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C8B26362937A3A500DBEA38 /* MyGreatFoodTests.swift in Sources */,
+				2C8B265F2938F5FE00DBEA38 /* MainPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
