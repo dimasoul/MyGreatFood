@@ -33,6 +33,14 @@ extension MainViewController: UITableViewDataSource {
     
 }
 
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let recipe = presenter.recipes?.recipes?[indexPath.row]
+        let detailViewController = ModelBuilder.createDetailModule(recipe: recipe)
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
+}
+
 extension MainViewController: MainViewProtocol {
     func success() {
         tableViewRecipe.reloadData()

@@ -23,6 +23,9 @@
 		2C8B265A2938DF1000DBEA38 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B26592938DF1000DBEA38 /* ModuleBuilder.swift */; };
 		2C8B265F2938F5FE00DBEA38 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B265E2938F5FE00DBEA38 /* MainPresenterTest.swift */; };
 		2C8B26612939E07800DBEA38 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B26602939E07800DBEA38 /* NetworkService.swift */; };
+		2CF00FAE293E102200B7615B /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF00FAD293E102200B7615B /* DetailPresenter.swift */; };
+		2CF00FB3293E181400B7615B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF00FB1293E181400B7615B /* DetailViewController.swift */; };
+		2CF00FB4293E181400B7615B /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF00FB2293E181400B7615B /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		2C8B26592938DF1000DBEA38 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		2C8B265E2938F5FE00DBEA38 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
 		2C8B26602939E07800DBEA38 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2CF00FAD293E102200B7615B /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		2CF00FB1293E181400B7615B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2CF00FB2293E181400B7615B /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 				2C8B261B2937A3A500DBEA38 /* AppDelegate.swift */,
 				2C8B261D2937A3A500DBEA38 /* SceneDelegate.swift */,
 				2C8B26592938DF1000DBEA38 /* ModuleBuilder.swift */,
+				2CF00FB0293E14B600B7615B /* DetailModule */,
 				2C8B26622939E09600DBEA38 /* ServiceLayer */,
 				2C8B26532938DCD300DBEA38 /* MainModule */,
 				2C8B26212937A3A500DBEA38 /* Main.storyboard */,
@@ -194,6 +201,32 @@
 				2C8B26602939E07800DBEA38 /* NetworkService.swift */,
 			);
 			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		2CF00FAF293E145E00B7615B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2CF00FAD293E102200B7615B /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2CF00FB0293E14B600B7615B /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				2CF00FB5293E182800B7615B /* View */,
+				2CF00FAF293E145E00B7615B /* Presenter */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		2CF00FB5293E182800B7615B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2CF00FB1293E181400B7615B /* DetailViewController.swift */,
+				2CF00FB2293E181400B7615B /* DetailViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +335,7 @@
 			files = (
 				2C8B262B2937A3A500DBEA38 /* LaunchScreen.storyboard in Resources */,
 				2C8B26282937A3A500DBEA38 /* Assets.xcassets in Resources */,
+				2CF00FB4293E181400B7615B /* DetailViewController.xib in Resources */,
 				2C8B26232937A3A500DBEA38 /* Main.storyboard in Resources */,
 				2C8B26582938DDA100DBEA38 /* MainViewController.xib in Resources */,
 			);
@@ -330,10 +364,12 @@
 			files = (
 				2C8B26502937A5B300DBEA38 /* Recipe.swift in Sources */,
 				2C8B26522937A6AA00DBEA38 /* MainPresenter.swift in Sources */,
+				2CF00FAE293E102200B7615B /* DetailPresenter.swift in Sources */,
 				2C8B26612939E07800DBEA38 /* NetworkService.swift in Sources */,
 				2C8B26202937A3A500DBEA38 /* MainViewController.swift in Sources */,
 				2C8B26262937A3A500DBEA38 /* MyGreatFood.xcdatamodeld in Sources */,
 				2C8B265A2938DF1000DBEA38 /* ModuleBuilder.swift in Sources */,
+				2CF00FB3293E181400B7615B /* DetailViewController.swift in Sources */,
 				2C8B261C2937A3A500DBEA38 /* AppDelegate.swift in Sources */,
 				2C8B261E2937A3A500DBEA38 /* SceneDelegate.swift in Sources */,
 			);
