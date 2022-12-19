@@ -8,20 +8,20 @@
 import Foundation
 
 protocol DetailViewProtocol: AnyObject {
-    func setRecipe(recipe: Recipe?)
+    func setRecipe(recipe: RecipeResponse?)
 }
 
 protocol DetailViewPresenterProtocol: AnyObject {
-    init(view: DetailViewProtocol, networkService: NetworkServiceProtocol, recipe: Recipe?)
+    init(view: DetailViewProtocol, networkService: NetworkServiceProtocol, recipe: RecipeResponse?)
     func setRecipe()
 }
 
 class DetailPresenter: DetailViewPresenterProtocol {
     weak var view: DetailViewProtocol?
     let networkService: NetworkServiceProtocol!
-    var recipe: Recipe?
+    var recipe: RecipeResponse?
     
-    required init(view: DetailViewProtocol, networkService: NetworkServiceProtocol, recipe: Recipe?) {
+    required init(view: DetailViewProtocol, networkService: NetworkServiceProtocol, recipe: RecipeResponse?) {
         self.view = view
         self.networkService = networkService
         self.recipe = recipe

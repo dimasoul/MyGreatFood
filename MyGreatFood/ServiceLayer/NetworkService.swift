@@ -8,11 +8,18 @@
 import Foundation
 
 protocol NetworkServiceProtocol {
-    func getRecipe(completion: @escaping (Result<Food?, Error>) -> Void)
+    func getRecipe(completion: @escaping (Result<FoodAPI?, Error>) -> Void)
 }
 
-class NetworkService: NetworkServiceProtocol {
-    func getRecipe(completion: @escaping (Result<Food?, Error>) -> Void) {
+final class NetworkService: NetworkServiceProtocol {
+    
+//    private let keyChainStorage: String
+//    init(keyChainStorage: String) {
+//        self.keyChainStorage = keyChainStorage
+//    }
+    
+    
+    func getRecipe(completion: @escaping (Result<FoodAPI?, Error>) -> Void) {
         let urlString = "https://api.spoonacular.com/recipes/random?apiKey=f9fe3370185540b8b5ecf328e243ecbc&number=20"
         guard let url = URL(string: urlString) else { return }
         
@@ -23,9 +30,9 @@ class NetworkService: NetworkServiceProtocol {
             }
             
             do {
-                let obj = try? JSONDecoder().decode(Food.self, from: data!)
-                completion(.success(obj))
-                print(obj)
+                let data = try? JSONDecoder().decode(FoodAPI?.self, from: data!)
+                completion(.success(data))
+                print(data)
                 
             } catch {
                 completion(.failure(error))

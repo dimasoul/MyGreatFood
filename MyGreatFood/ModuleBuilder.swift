@@ -9,7 +9,7 @@ import UIKit
 
 protocol Builder {
     static func createMainModule() -> UIViewController
-    static func createDetailModule(recipe: Recipe?) -> UIViewController}
+    static func createDetailModule(recipe: RecipeResponse?) -> UIViewController}
 
 class ModelBuilder: Builder {
 
@@ -21,7 +21,7 @@ class ModelBuilder: Builder {
         return view
     }
     
-    static func createDetailModule(recipe: Recipe?) -> UIViewController {
+    static func createDetailModule(recipe: RecipeResponse?) -> UIViewController {
         let view = DetailViewController()
         let networkService = NetworkService()
         let presenter = DetailPresenter(view: view, networkService: networkService, recipe: recipe)

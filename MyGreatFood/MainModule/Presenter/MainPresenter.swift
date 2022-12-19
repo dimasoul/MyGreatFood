@@ -15,14 +15,14 @@ protocol MainViewProtocol: AnyObject {
 protocol MainViewPresenterProtocol: AnyObject {
     init(view: MainViewProtocol, networkService: NetworkServiceProtocol)
     func getRecipe()
-    var recipes: Food? { get set }
+    var recipes: FoodAPI? { get set }
 }
     
 class MainPresenter: MainViewPresenterProtocol {
     
     weak var view: MainViewProtocol?
     let networkService: NetworkServiceProtocol!
-    var recipes: Food?
+    var recipes: FoodAPI?
     
     required init(view: MainViewProtocol, networkService: NetworkServiceProtocol) {
         self.view = view
