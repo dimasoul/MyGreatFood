@@ -8,7 +8,6 @@
 
 import Foundation
 
-// MARK: - Weather
 struct FoodAPI: Codable {
     var recipes: [RecipeResponse]?
 }

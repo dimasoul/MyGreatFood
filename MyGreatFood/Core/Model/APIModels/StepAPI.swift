@@ -7,7 +7,6 @@
 
 import Foundation
 
-// MARK: - Step
 struct StepAPI: Codable {
     var number: Int?
     var step: String?

@@ -7,7 +7,6 @@
 
 import Foundation
 
-// MARK: - AnalyzedInstruction
 struct AnalyzedInstructionAPI: Codable {
     var name: String?
     var steps: [StepAPI]?

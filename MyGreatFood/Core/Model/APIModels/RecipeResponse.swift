@@ -7,7 +7,6 @@
 
 import Foundation
 
-// MARK: - Recipe
 struct RecipeResponse: Codable {
     var vegetarian: Bool?
     var vegan: Bool?
@@ -44,5 +43,4 @@ struct RecipeResponse: Codable {
     var instructions: String?
     var analyzedInstructions: [AnalyzedInstructionAPI]?
     var spoonacularSourceUrl: String?
-
 }

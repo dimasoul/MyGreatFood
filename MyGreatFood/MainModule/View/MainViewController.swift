@@ -15,7 +15,6 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tableViewRecipe.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableViewRecipe.register(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         tableViewRecipe.rowHeight = 150
         self.title = "Tasty Recipes"
@@ -33,7 +32,6 @@ extension MainViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MainTableViewCell
         let recipe = presenter.recipes?.recipes?[indexPath.row]
         cell.configure(food: recipe)
-        //cell.textLabel?.text = recipe?.title
         return cell
     }
     
@@ -44,13 +42,10 @@ extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let recipe = presenter.recipes?.recipes?[indexPath.row]
-        let detailViewController = ModelBuilder.createDetailModule(recipe: recipe)
+        let detailViewController = ModelFactory.createDetailModule(recipe: recipe)
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     
-    //func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-     //   150
-    //}
 }
 
 extension MainViewController: MainViewProtocol {
@@ -61,8 +56,5 @@ extension MainViewController: MainViewProtocol {
     func failure(error: Error) {
         print(error.localizedDescription)
     }
-    
-
-    
     
 }

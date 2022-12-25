@@ -31,7 +31,7 @@ class MainPresenter: MainViewPresenterProtocol {
     }
     
     func getRecipe() {
-        networkService.getRecipe { [weak self] result in
+        networkService.makeRequest { [weak self] result in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 switch result {

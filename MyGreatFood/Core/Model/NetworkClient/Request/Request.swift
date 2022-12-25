@@ -10,4 +10,5 @@ import Foundation
 protocol Request {
     var baseURL: String { get }
     var path: String { get }
+    var key: String { get }
 }
